@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TestApp210202</string>
+    <string name="operaciones_basicas">Operaciones Basicas</string>
+    <string name="escriba_el_segundo_valor">Escriba el segundo valor</string>
+    <string name="escriba_el_primer_valor">Escriba el primer valor</string>
+    <string name="simbolo_division">/</string>
+    <string name="simbolo_suma">+</string>
+    <string name="simbolo_resta">-</string>
+    <string name="simbolo_multiplicacion">*</string>
+    <string name="limpiar">Limpiar</string>
+</resources>
