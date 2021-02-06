@@ -1,115 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/titulo_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/operaciones_basicas"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-    <EditText
-        android:id="@+id/dato1_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:autofillHints="number"
-        android:ems="10"
-        android:hint="@string/escriba_el_primer_valor"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo_text" />
-
-    <EditText
-        android:id="@+id/dato2_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:autofillHints="number"
-        android:ems="10"
-        android:hint="@string/escriba_el_segundo_valor"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dato1_edit" />
-
-    <TextView
-        android:id="@+id/resultado_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dato2_edit"
-        tools:text="Resultado" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultado_text">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-        <Button
-            android:id="@+id/division_button"
+        <TextView
+            android:id="@+id/titulo_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/simbolo_division"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/multiplicacion_button"
-            app:layout_constraintTop_toBottomOf="@+id/multiplicacion_button" />
-
-        <Button
-            android:id="@+id/suma_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/simbolo_suma"
-            app:layout_constraintBottom_toTopOf="@+id/resta_button"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/operaciones_basicas"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/resta_button"
+        <EditText
+            android:id="@+id/dato1_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/simbolo_resta"
-            app:layout_constraintBottom_toTopOf="@+id/multiplicacion_button"
-            app:layout_constraintStart_toStartOf="@+id/suma_button"
-            app:layout_constraintTop_toBottomOf="@+id/suma_button" />
+            android:layout_marginTop="32dp"
+            android:autofillHints="number"
+            android:ems="10"
+            android:hint="@string/escriba_el_primer_valor"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_text" />
 
-        <Button
-            android:id="@+id/multiplicacion_button"
+        <EditText
+            android:id="@+id/dato2_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/simbolo_multiplicacion"
-            app:layout_constraintBottom_toTopOf="@+id/division_button"
-            app:layout_constraintStart_toStartOf="@+id/resta_button"
-            app:layout_constraintTop_toBottomOf="@+id/resta_button" />
+            android:layout_marginTop="16dp"
+            android:autofillHints="number"
+            android:ems="10"
+            android:hint="@string/escriba_el_segundo_valor"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dato1_edit" />
 
-        <Button
-            android:id="@+id/limpiar_button"
+        <TextView
+            android:id="@+id/resultado_text"
             android:layout_width="wrap_content"
-            android:layout_height="235dp"
-            android:layout_marginStart="16dp"
-            android:text="@string/limpiar"
-            app:layout_constraintBottom_toBottomOf="@+id/division_button"
-            app:layout_constraintStart_toEndOf="@+id/suma_button"
-            app:layout_constraintTop_toTopOf="@+id/suma_button" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dato2_edit"
+            tools:text="Resultado" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultado_text">
+
+            <Button
+                android:id="@+id/division_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/simbolo_division"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/multiplicacion_button"
+                app:layout_constraintTop_toBottomOf="@+id/multiplicacion_button" />
+
+            <Button
+                android:id="@+id/suma_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/simbolo_suma"
+                app:layout_constraintBottom_toTopOf="@+id/resta_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/resta_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/simbolo_resta"
+                app:layout_constraintBottom_toTopOf="@+id/multiplicacion_button"
+                app:layout_constraintStart_toStartOf="@+id/suma_button"
+                app:layout_constraintTop_toBottomOf="@+id/suma_button" />
+
+            <Button
+                android:id="@+id/multiplicacion_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/simbolo_multiplicacion"
+                app:layout_constraintBottom_toTopOf="@+id/division_button"
+                app:layout_constraintStart_toStartOf="@+id/resta_button"
+                app:layout_constraintTop_toBottomOf="@+id/resta_button" />
+
+            <Button
+                android:id="@+id/limpiar_button"
+                android:layout_width="wrap_content"
+                android:layout_height="235dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/limpiar"
+                app:layout_constraintBottom_toBottomOf="@+id/division_button"
+                app:layout_constraintStart_toEndOf="@+id/suma_button"
+                app:layout_constraintTop_toTopOf="@+id/suma_button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
